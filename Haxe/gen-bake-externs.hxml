@@ -1,0 +1,15 @@
+# this file is here for convenience only (e.g. to make your IDE work or to compile without invoking UE4 Build)
+# this is not used by the build pipeline, and is recommended to be ignored by your SCM
+# please change "arguments.hxml" instead
+
+# this pass will bake the extern type definitions into glue code
+
+-cp /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/Static
+-D use-rtti-doc
+-D bake-externs
+
+-cpp /Users/pro13/dev/UE4_workshop/BingoAdventure/Haxe/Generated/Externs_Editor
+--no-output
+--macro ue4hx.internal.ExternBaker.process(["/Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/Externs","/Users/pro13/dev/UE4_workshop/BingoAdventure/Haxe/Externs"], false)
+-D WITH_EDITOR
+-D BUILDTOOL_VERSION_LEVEL=4

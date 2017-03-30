@@ -1,0 +1,14 @@
+# use this to build the build tool. if you have made any changes to any .Build.hx files, run this
+-cp /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/BuildTool/src
+-cp /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/BuildTool
+-cp /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx
+-net-lib /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/BuildTool/lib/DotNETUtilities.dll
+-net-lib /Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Haxe/BuildTool/lib/UnrealBuildTool.dll
+-cs /Users/pro13/dev/UE4_workshop/BingoAdventure/Intermediate/Haxe/BuildTool
+HaxeInit
+
+-D no-root
+-D net_ver=45
+-D analyzer
+-D real_position
+--macro Package.main("/Users/pro13/dev/UE4_workshop/BingoAdventure/Source", [{ name:"HaxeInit", target:"/Users/pro13/dev/UE4_workshop/BingoAdventure/Plugins/UnrealHx/Source/HaxeInit/HaxeInit.Build.cs" }])
